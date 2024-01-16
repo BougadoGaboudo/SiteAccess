@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url(./font/Philosopher-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.2em;
+  font-family: "Philosopher";
+}
+
+body {
+  background-color: rgb(19, 19, 20);
+}
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* HEADER */
+
+li, li a {
+  font-family: "Philosopher";
+  font-weight: 500;
+  font-size: 1.2em;
+  color: white;
+  padding: 20px;
+}
+button {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 2.5%;
+  background-color: rgb(19, 19, 20);
+  height: 48px;
+}
+.logo {
+  cursor: pointer;
+}
+.navlinks li {
+  display: inline-block;
+  /* padding: 20px; */
+  font-size: 0.6em;
+  border-radius: 10px;
+}
+.navlinks a li {
+  transition: all 0.3s ease 0s;
+}
+.navlinks li:hover {
+  background-color:rgba(255, 255, 255, 0.2);
+}
+button {
+  padding: 16px 32px;
+  font-size: 0.6em;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  color: rgb(19, 19, 20);
+  background-color: #BA8A63;
+}
+
+/* FOOTER */
+
+footer p {
+  padding: 32px;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: rgb(19, 19, 20);
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ACCUEIL */
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/arcane.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.arcane {
+  filter: drop-shadow(0 0 0.8rem rgb(136, 108, 85));
+}
+
+/* PERSOS */
+
+.jinximg, .viimg, .silcoimg {
+  border-radius: 30px;
+}
+.container_jinx, .container_silco {
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.container_vi {
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.item-texte {
+  padding: 0 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.item-img {
+  padding: 0 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 800ms;
+}
+.item-img:hover {
+  transition: 500ms;
+  scale: 1.05;
+}
+.anim-img{
+  transition: 800ms;
+}
+.anim-img:hover {
+  transition: 500ms;
+  scale: 1.05;
+}
+h1.titre {
+  font-size: 5em;
+  color: white;
+  transition: 800ms;
+}
+.titre-jinx:hover, .titre-vi:hover, .titre-silco:hover {
+  transition: 500ms;
+  scale: 1.05;
+}
+.titre-jinx:hover {
+  filter: drop-shadow(0 0 0.8rem #4E7988);
+}
+.titre-vi:hover {
+  filter: drop-shadow(0 0 0.8rem #B62842);
+}
+.titre-silco:hover {
+  filter: drop-shadow(0 0 0.8rem #779C49);
+}
+p.texte {
+  font-size: 0.8em;
+  color: white;
+  text-align: justify;
+  text-align-last: center;
+  width: 90%;
+}
+.hiddenX {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition: all 1s;
+}
+.hiddenY {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-20%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+}
+.carousel {
+  height: 736px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.perso:nth-child(2) {
+  transition-delay: 200ms;
+}
+.perso:nth-child(3) {
+  transition-delay: 400ms;
+}
+/* @media(prefers-reduced-motion){
+  .hiddenX, .hiddenY {
+    transition: none;
+  }
+} */
+
+/* .section1, .section2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+.section1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(./img/piltover.jpg) top center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+  filter: blur(2px);
+}
+.section2 {
+  background-color: red;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 8vw;
+  color: white;
+  filter: drop-shadow(0 0 0.3rem #BA8A63);
+} */
+.section1, .section2 {
+  position: relative;
+  width: 100%;
+  height: 1064px;
+}
+.section1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1064px;
+  background-image: url(./img/piltover.jpg);
+  background-size: cover;
+  z-index: -2;
+}
+.text-pilto {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
+  font-weight: 900;
+  color: #BA8A63;
+  text-shadow: -1px 0px 0px white,
+  1px 0px 0px white,
+  0px -1px 0px white,
+  0px 1px 0px white;
+  z-index: -1;
+}
+.text-zaun {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
+  font-weight: 900;
+  color: #BA8A63;
+  text-shadow: -1px 0px 0px white,
+  1px 0px 0px white,
+  0px -1px 0px white,
+  0px 1px 0px white;
+  z-index: -1;
+}
+.pilto {
+  /* background-image: url(./img/piltoverfront.png); */
+  background-size: cover;
+  z-index: 1;
+}
+.section2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/zaun.jpg);
+  background-size: cover;
+  z-index: -2;
+}
+
+/* .zaun {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  background-image: url(/img/zaun.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(1500px at center center);
+  z-index: -1;
+  transition: 200ms;
+}
+.titre-pilto {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: -2;
+  font-size: 10vw;
+  background-image: url(/img/piltover.jpg);
+  background-size: cover;
+}
+.titre-zaun {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: yellow;
+  z-index: -2;
+  font-size: 10vw;
+  background: yellow;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* FORMULAIRE CONNEXION */
+
+form {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px solid white;
+}
+legend, label, fieldset a {
+  color: white;
+  padding: 32px;
+  font-size: 0.8em;
+}
+input {
+  font-size: 0.8em;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
