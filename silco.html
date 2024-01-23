@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="arcaneicon.png"/>
-    <script defer src="app.js"></script>
+    <link rel="icon" type="image/png" href="arcaneicon.png" />
+    <script defer src="anim.js"></script>
     <title>Arcane</title>
 </head>
+
 <body>
     <header>
-        <img class="logo" width="8%" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
+        <img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
         <nav>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -25,20 +27,44 @@
     <hr>
 
     <main>
-        <section class="hiddenY">
-            <div class="container_silco">
-                <div class="item-texte">
-                    <h1 class="titre titre-silco">SILCO</h1>
-                    <p class="texte">Silco est un baron de la drogue zaunite et le père adoptif de Jinx. Homme tyrannique et brutal, il cherche à libérer Zaun du contrôle de Piltover et est prêt à faire à peu près n'importe quoi pour atteindre cet objectif.</p>
+        <article>
+            <section>
+                <div class="container_silco">
+                    <div class="hiddenX item-texte">
+                        <h1 class="titre titre-silco">SILCO</h1>
+                        <p class="texte">Silco est un baron de la drogue zaunite et le père adoptif de Jinx. Homme
+                            tyrannique et brutal, il cherche à libérer Zaun du contrôle de Piltover et est prêt à faire
+                            à peu près n'importe quoi pour atteindre cet objectif.</p>
+                    </div>
+                    <div class="hiddenY item-img"><img class="silcoimg" src="./img/silco.jpg" alt="Personnage Silco">
+                    </div>
                 </div>
-                <div class="item-img"><img class="silcoimg" width="500"src="./img/silco.jpg" alt="Personnage Silco"></div>
-            </div>
-        </section>
+            </section>
+            <section>
+                <div class="art">
+                    <h1>Concept Art / Modèle 3D</h1>
+                    <div class="hiddenX">
+                        <img class="resize" src="img/silcoconcept.jpg" alt="Concept Art de Silco">
+                    </div>
+                    <div class="hiddenXRight">
+                        <img class="resize" src="img/silcohead.jpg" alt="Modèle 3D tête de Silco">
+                    </div>
+                    <div class="hiddenX">
+                        <img class="resize" src="img/silcomodel.jpg" alt="Modèle 3D global de Silco">
+                    </div>
+                    <div class="hiddenXRight">
+                        <img class="resize" src="img/silcopose.jpg" alt="Modèle 3D pose de Silco">
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
     <hr>
     <footer>
-        <p>&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de service et/ou des marques déposées de Riot Games, Inc.</p>
+        <p>&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de
+            service et/ou des marques déposées de Riot Games, Inc.</p>
     </footer>
 </body>
+
 </html>

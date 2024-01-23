@@ -14,6 +14,7 @@
 
 body {
   background-color: rgb(19, 19, 20);
+  height: 100vh;
 }
 hr {
   border: none;
@@ -44,6 +45,7 @@ header {
 }
 .logo {
   cursor: pointer;
+  width: 8%;
 }
 .navlinks li {
   display: inline-block;
@@ -58,7 +60,7 @@ header {
   background-color:rgba(255, 255, 255, 0.2);
 }
 button {
-  padding: 16px 32px;
+  padding: 1rem 2rem;
   font-size: 0.6em;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
@@ -96,14 +98,136 @@ footer p {
   height: 100vh;
   width: 100%;
 }
+.affiche {
+  height: 100vh;
+  background-image: url(img/arcaneaccueil.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .arcane {
   filter: drop-shadow(0 0 0.8rem rgb(136, 108, 85));
+  width: 37.5rem;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+}
+
+/* ACTUALITÉS */
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.counter p {
+  padding: 1rem 0 0 0;
+  color: white;
+}
+.box p {
+  color: rgb(19, 19, 20);
+  font-size: 3rem;
+}
+.temps {
+  display: flex;
+}
+.box {
+  background-color: white;
+  width: 13.125rem;
+  padding: 1.25rem;
+  margin: 0 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.box span {
+  font-size: 3rem;
+}
+iframe {
+  width: 70rem;
+  height: 35.625rem;
+}
+
+/* RÉGIONS */
+
+section.pilto-png {
+  background-image: url(img/piltoverfront.png);
+  background-position: center;
+  background-size: cover;
+}
+.pilto-bg, .zaun-bg {
+  position: relative;
+  height: 55.813rem;
+  width: 100%;
+}
+.pilto-bg::before {
+  content: "";
+  position: absolute  ;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/piltover.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+.pilto-text {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 10vw + 0.5rem, 6rem);
+  font-weight: 900;
+  color: #BA8A63;
+  filter: drop-shadow(0 0 0.8rem rgb(243, 201, 166));
+  text-shadow: -1px 0px 0px white,
+  1px 0px 0px white,
+  0px -1px 0px white,
+  0px 1px 0px white;
+  z-index: -1;
+}
+section.zaun-bg::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/zaun.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+.zaun-text {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 10vw + 0.5rem, 6rem);
+  font-weight: 900;
+  color: #BA8A63;
+  filter: drop-shadow(0 0 0.8rem rgb(243, 201, 166));
+  text-shadow: -1px 0px 0px white,
+  1px 0px 0px white,
+  0px -1px 0px white,
+  0px 1px 0px white;
+  z-index: 2;
 }
 
 /* PERSOS */
 
+.jinximgC, .viimgC, .silcoimgC {
+  border-radius: 30px;
+  width: 22rem;
+}
 .jinximg, .viimg, .silcoimg {
   border-radius: 30px;
+  width: 27rem;
 }
 .container_jinx, .container_silco {
   padding: 64px;
@@ -142,7 +266,7 @@ footer p {
   scale: 1.05;
 }
 h1.titre {
-  font-size: 5em;
+  font-size: 4em;
   color: white;
   transition: 800ms;
 }
@@ -166,10 +290,31 @@ p.texte {
   text-align-last: center;
   width: 90%;
 }
+.art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.art h1 {
+  padding: 1.875rem;
+  color: white;
+}
+.resize {
+  padding: 1rem;
+  width: 62.5rem;
+}
+/* ANIMATION TRANSITION*/
 .hiddenX {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-20%);
+  transition: all 1s;
+}
+.hiddenXRight {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(20%);
   transition: all 1s;
 }
 .hiddenY {
@@ -185,7 +330,7 @@ p.texte {
   transform: translateY(0);
 }
 .carousel {
-  height: 736px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,168 +342,87 @@ p.texte {
 .perso:nth-child(3) {
   transition-delay: 400ms;
 }
+.perso:nth-child(4) {
+  transition-delay: 600ms;
+}
 /* @media(prefers-reduced-motion){
-  .hiddenX, .hiddenY {
+  .hiddenX, .hiddenY, .hiddenXRight {
     transition: none;
   }
 } */
 
-/* .section1, .section2 {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-.section1::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(./img/piltover.jpg) top center;
-  background-size: cover;
-  transform: translateZ(-1px) scale(2.2);
-  filter: blur(2px);
-}
-.section2 {
-  background-color: red;
-}
-.text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 8vw;
-  color: white;
-  filter: drop-shadow(0 0 0.3rem #BA8A63);
-} */
-.section1, .section2 {
-  position: relative;
-  width: 100%;
-  height: 1064px;
-}
-.section1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1064px;
-  background-image: url(./img/piltover.jpg);
-  background-size: cover;
-  z-index: -2;
-}
-.text-pilto {
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
-  font-weight: 900;
-  color: #BA8A63;
-  text-shadow: -1px 0px 0px white,
-  1px 0px 0px white,
-  0px -1px 0px white,
-  0px 1px 0px white;
-  z-index: -1;
-}
-.text-zaun {
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
-  font-weight: 900;
-  color: #BA8A63;
-  text-shadow: -1px 0px 0px white,
-  1px 0px 0px white,
-  0px -1px 0px white,
-  0px 1px 0px white;
-  z-index: -1;
-}
-.pilto {
-  /* background-image: url(./img/piltoverfront.png); */
-  background-size: cover;
-  z-index: 1;
-}
-.section2::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(./img/zaun.jpg);
-  background-size: cover;
-  z-index: -2;
-}
-
-/* .zaun {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  background-image: url(/img/zaun.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  clip-path: circle(1500px at center center);
-  z-index: -1;
-  transition: 200ms;
-}
-.titre-pilto {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  z-index: -2;
-  font-size: 10vw;
-  background-image: url(/img/piltover.jpg);
-  background-size: cover;
-}
-.titre-zaun {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  color: yellow;
-  z-index: -2;
-  font-size: 10vw;
-  background: yellow;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-/* FORMULAIRE CONNEXION */
+/* FORMULAIRE CONNEXION INSCRIPTION*/
 
 form {
   padding: 32px;
+  margin-bottom: 3rem;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2px solid white;
+}
+.inscription {
+  height: 60rem;
+}
+.inscription legend {
+  font-size: 0.7em;
+  font-weight: 600;
+}
+legend {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.inscription label, .inscription fieldset a {
+  font-size: 0.4em;
+}
+.inscription button.log { font-size: 0.6em; }
+label, fieldset a, button.log {
+  font-size: 0.6em;
+}
+legend, label {
+  padding: 32px;
+}
+fieldset a {
+  padding: 16px;
+}
+button.inscri {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 legend, label, fieldset a {
+  text-align: center;
   color: white;
-  padding: 32px;
-  font-size: 0.8em;
 }
-input {
-  font-size: 0.8em;
-  width: 25rem;
+fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.inscription input {
+  font-size: 0.4em;
+  width: 25rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+input {
+  font-size: 0.6em;
+  width: 25rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }

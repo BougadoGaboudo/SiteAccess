@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="arcaneicon.png"/>
+    <link rel="icon" type="image/png" href="arcaneicon.png" />
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <script defer src="anim.js"></script>
     <title>Arcane</title>
 </head>
+
 <body>
     <header>
-        <img class="logo" width="8%" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
+        <img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
         <nav>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -25,20 +27,45 @@
     <hr>
 
     <main>
-        <section class="hiddenY">
-            <div class="container_jinx">
-                <div class="item-texte">
-                    <h1 class="titre titre-jinx">JINX</h1>
-                    <p class="texte">Jinx, autrefois appelée Powder, soeur cadette de Vi, est une criminelle zaunite notoire. Après qu'une série d'événements ait séparé Jinx et sa sœur de plusieurs manières, elle a été fondamentalement bouleversée, la transformant en tueuse démente qu'elle est aujourd'hui.</p>
+        <article>
+            <section>
+                <div class="container_jinx">
+                    <div class="hiddenX item-texte">
+                        <h1 class="titre titre-jinx">JINX</h1>
+                        <p class="texte">Jinx, autrefois appelée Powder, soeur cadette de Vi, est une criminelle zaunite
+                            notoire. Après qu'une série d'événements ait séparé Jinx et sa sœur de plusieurs manières,
+                            elle a été fondamentalement bouleversée, la transformant en tueuse démente qu'elle est
+                            aujourd'hui.</p>
+                    </div>
+                    <div class="hiddenY item-img"><img class="jinximg" src="./img/jinx.jpg" alt="Personnage Jinx">
+                    </div>
                 </div>
-                <div class="item-img"><img class="jinximg" width="500"src="./img/jinx.jpg" alt="Personnage Jinx"></div>
-            </div>
-        </section>
+            </section>
+            <section>
+                <div class="hidden art">
+                    <h1>Concept Art / Modèle 3D</h1>
+                    <div class="hiddenX">
+                        <img class="resize" src="img/jinxconcept.jpg" alt="Concept Art de Jinx">
+                    </div>
+                    <div class="hiddenXRight">
+                        <img class="resize" src="img/jinxhead.jpg" alt="Modèle 3D tête de Jinx">
+                    </div>
+                    <div class="hiddenX">
+                        <img class="resize" src="img/jinxmodel.jpg" alt="Modèle 3D global de Jinx">
+                    </div>
+                    <div class="hiddenXRight">
+                        <img class="resize" src="img/jinxpose.jpg" alt="Modèle 3D pose de Jinx">
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
     <hr>
     <footer>
-        <p>&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de service et/ou des marques déposées de Riot Games, Inc.</p>
+        <p>&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de
+            service et/ou des marques déposées de Riot Games, Inc.</p>
     </footer>
 </body>
+
 </html>

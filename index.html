@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="arcaneicon.png"/>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <script defer src="anim.js"></script>
     <title>Arcane</title>
 </head>
 <body>
     <header>
-        <img class="logo" width="8%" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
+        <img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
         <nav>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -25,9 +25,20 @@
     <hr>
 
     <main>
-        <div class="bg">
-            <img width="600" class="arcane" src="./img/arcanelogo.png" alt="Logo Arcane">
-        </div>
+        <article>
+            <section>
+                <div class="hidden affiche"></div>
+            </section>
+            <section>
+                <div class="hidden">
+                    <div class="bg">
+                        <div class="hiddenY">
+                            <img class="arcane" src="./img/arcanelogo.png" alt="Logo Arcane">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
     <hr>
