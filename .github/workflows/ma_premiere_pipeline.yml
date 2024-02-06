@@ -61,3 +61,9 @@ jobs:
         run: |
           npm i
           npm run a11y
+          COMMIT="${{ github.event.head_commit.message }}"
+          REGEXP="^(.+){1}(\([[:alnum:]._-]+\))?(!)?: ([[:alnum:]])+([[:space:][:print:]]*)"
+          if ! [[ $COMMIT =~ $REGEXP ]]; then
+              echo "Le message de commit n'est pas bien formaté"
+              exit 1
+            fi
