@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 
 <head>
     <meta charset="UTF-8">
@@ -29,20 +29,29 @@
 
     <main>
         <article>
-            <section>
+            <section class="hidden bg">
                 <div id="timer" class="counter">
-                    <p>Sortie de la saison 2 dans :</p>
+                    <p>SAISON 2 :</p>
                     <div class="temps">
                         <div class="box">
                             <span id="days"></span>
+                            <div class="deuxpointsD">
+                                <p>:</p>
+                            </div>
                             <p>Jours</p>
                         </div>
                         <div class="box">
                             <span id="hours"></span>
+                            <div class="deuxpointsH">
+                                <p>:</p>
+                            </div>
                             <p>Heures</p>
                         </div>
                         <div class="box">
                             <span id="minutes"></span>
+                            <div class="deuxpointsM">
+                                <p>:</p>
+                            </div>
                             <p>Minutes</p>
                         </div>
                         <div class="box">
@@ -52,9 +61,9 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="bg">
-                    <iframe src="https://www.youtube.com/embed/D3FMgkSBOBE"
+            <section class="video-center">
+                <div class="hidden">
+                    <iframe class="video" src="https://www.youtube.com/embed/D3FMgkSBOBE"
                         title="Arcane : Premier aperçu de la saison 2" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
