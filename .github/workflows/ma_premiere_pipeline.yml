@@ -21,28 +21,6 @@ concurrency:
 
 # Nos jobs !
 jobs:
-  deploiement:
-    name: Déploiement sur Github Pages
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      # Se place dans le repo
-      - name: Changement de repo
-        uses: actions/checkout@v4
-      # Configure GitHub Pages
-      - name: Configuration
-        uses: actions/configure-pages@v4
-      # Permet de faire en sorte que votre site puisse être envoyé sur GitHub Pages
-      - name: Téléversement des artefacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      # Déploie les fichiers sur GitHub Pages
-      - name: Déploiement vers GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
   la_vache_dit:
     name: La vache dit...
     runs-on: ubuntu-latest
@@ -66,4 +44,27 @@ jobs:
           if ! [[ $COMMIT =~ $REGEXP ]]; then
               echo "Le message de commit n'est pas bien formaté"
               exit 1
-            fi
+          fi
+  deploiement:
+    name: Déploiement sur Github Pages
+    needs: accessibilite_numerique
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Se place dans le repo
+      - name: Changement de repo
+        uses: actions/checkout@v4
+      # Configure GitHub Pages
+      - name: Configuration
+        uses: actions/configure-pages@v4
+      # Permet de faire en sorte que votre site puisse être envoyé sur GitHub Pages
+      - name: Téléversement des artefacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      # Déploie les fichiers sur GitHub Pages
+      - name: Déploiement vers GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
