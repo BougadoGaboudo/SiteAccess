@@ -45,10 +45,10 @@ jobs:
         uses: actions/deploy-pages@v4
 
 la_vache_dit:
-name: La vache dit...
-runs-on: ubuntu-latest
-steps:
-- name: Meuh
-uses: mscoutermarsh/cowsays-action@master
-with:
-text: 'Mon super message'
+  name: La vache dit...
+  runs-on: ubuntu-latest
+  steps:
+    name: Meuh
+    uses: mscoutermarsh/cowsays-action@master
+    with:
+      text: 'Mon super message'
