@@ -51,3 +51,13 @@ jobs:
       uses: mscoutermarsh/cowsays-action@master
       with:
         text: 'Mon super message'
+  accessibilite_numerique:
+    name: Vérification de l'accessibilité numérique
+    runs-on: ubuntu-latest
+    steps:
+      - name: Changement de branche
+        uses: actions/checkout@v4
+      - name: Installation et exécution
+        run: |
+          npm ci
+          npm run a11y
