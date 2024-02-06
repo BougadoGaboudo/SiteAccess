@@ -60,4 +60,4 @@ jobs:
       - name: Installation et exécution
         run: |
           npm ci
-          npm run a11y
+          npm run a11yazfzaf
