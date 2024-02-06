@@ -4,7 +4,7 @@ name: Déploiement sur Github Pages
 # Quand s'exécute la pipeline
 on:
   push: # Quand on pousse
-    branches: ["main"] #...sur la branche main
+    branches: ["master"] #...sur la branche main
 
   workflow_dispatch:
 
