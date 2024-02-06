@@ -47,7 +47,7 @@ jobs:
     name: La vache dit...
     runs-on: ubuntu-latest
     steps:
-      name: Meuh
+    - name: Meuh
       uses: mscoutermarsh/cowsays-action@master
       with:
         text: 'Mon super message'
