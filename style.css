@@ -89,7 +89,7 @@ button:hover {
 
 footer p {
   padding: 32px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   background-color: rgb(19, 19, 20);
   font-size: 0.7em;
   display: flex;
@@ -276,6 +276,8 @@ iframe {
   height: 35.625rem;
 }
 .modal-btn2{
+  position: absolute;
+  top: 32%;
   font-size: 0.5em;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 2em;
