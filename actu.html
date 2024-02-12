@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="anim.js"></script>
     <script defer src="timer.js"></script>
+    <script defer src="video.js"></script>
     <title>Arcane</title>
 </head>
 
@@ -29,20 +30,30 @@
 
     <main>
         <article>
-            <section>
+
+            <section class="hidden bg">
                 <div id="timer" class="counter">
-                    <p>Sortie de la saison 2 dans :</p>
+                    <p>SAISON 2 :</p>
                     <div class="temps">
                         <div class="box">
                             <span id="days"></span>
+                            <div class="deuxpointsD">
+                                <p>:</p>
+                            </div>
                             <p>Jours</p>
                         </div>
                         <div class="box">
                             <span id="hours"></span>
+                            <div class="deuxpointsH">
+                                <p>:</p>
+                            </div>
                             <p>Heures</p>
                         </div>
                         <div class="box">
                             <span id="minutes"></span>
+                            <div class="deuxpointsM">
+                                <p>:</p>
+                            </div>
                             <p>Minutes</p>
                         </div>
                         <div class="box">
@@ -51,15 +62,19 @@
                         </div>
                     </div>
                 </div>
+                <button class="modal-btn2 modal-trigger">Voir le petit teaser</button>
             </section>
+
             <section>
-                <div class="bg">
-                    <iframe src="https://www.youtube.com/embed/D3FMgkSBOBE"
-                        title="Arcane : Premier aperçu de la saison 2" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                <div class="modal-container">
+                    <div class="overlay modal-trigger"></div>
+                    <button tabindex="1" aria-label="close modal" class="close-modal modal-trigger">X</button>
+                    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+                        <iframe id="video" src="https://www.youtube.com/embed/D3FMgkSBOBE?enablejsapi=1&html5=1" title="Arcane : Premier aperçu de la saison 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </section>
+
         </article>
     </main>
 

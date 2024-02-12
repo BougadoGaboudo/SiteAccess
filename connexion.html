@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="arcaneicon.png"/>
+    <link rel="icon" type="image/png" href="arcaneicon.png" />
     <link rel="stylesheet" href="style.css">
     <script defer src="anim.js"></script>
+    <script defer src="alert.js"></script>
     <title>Arcane</title>
 </head>
 
@@ -26,27 +28,39 @@
     <hr>
 
     <main>
-        <form action="">
-        <fieldset>
-            <legend>Connexion</legend>
-            <div>
-                <label for="id">Nom d'utilisateur</label>
-                <input type="text" placeholder="Nom d'utilisateur" name="id" id="id"/>
-            </div>
-            <div>
-                <label for="mdp">Mot de passe</label>
-                <input type="password" placeholder="Mot de passe" name="mdp" id="mdp"/>
-            </div>
-            <button class="log" type="button">Se connecter</button>
-            <a href="inscription.html">Créer un compte</a>
-        </fieldset>
-        </form>
+        <article>
+            <section class="form-sect">
+                <div class="form-div">
+                    <form action="">
+                        <fieldset>
+                            <legend>Connexion</legend>
+                            <div class="flex">
+                                <label for="id">Nom d'utilisateur</label>
+                                <input type="text" placeholder="Nom d'utilisateur" name="id" id="id" required/>
+                            </div>
+                            <div class="flex">
+                                <label for="mdp">Mot de passe</label>
+                                <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" required/>
+                            </div>
+                            <button id="bouton" class="log" type="button">Se connecter</button>
+                            <div class="session" id="alert" role="alert"></div>
+                            <a href="inscription.html">Créer un compte</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </article>
     </main>
 
     <hr>
     <footer>
-        <p class="copyright">&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de service et/ou des marques déposées de Riot Games, Inc.</p>
+        <p class="copyright">&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des
+            marques, des marques de service et/ou des marques déposées de Riot Games, Inc.</p>
     </footer>
 
+    <script type="text/template" id="alert-template">
+        <p>Pas de session disponible</p>
+    </script>
 </body>
+
 </html>

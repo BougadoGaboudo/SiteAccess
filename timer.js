@@ -21,7 +21,7 @@ function timeBetweenDates(toDate){
         hours %= 24;
         minutes %= 60;
         seconds %= 60;
-        
+
         document.getElementById('days').innerHTML = days;
         document.getElementById('hours').innerHTML = hours;
         document.getElementById('minutes').innerHTML = minutes;

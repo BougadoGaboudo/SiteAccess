@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="arcaneicon.png" />
     <link rel="stylesheet" href="style.css">
     <script defer src="anim.js"></script>
+    <script defer src="menu.js"></script>
     <title>Arcane</title>
 </head>
 
@@ -28,7 +29,20 @@
 
     <main>
         <article>
-            <section>
+            <section id="desc">
+                <div class="links">
+                    <button id="menu" aria-expanded="false">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none"/>
+                            <path d="M4 6h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
+                        </svg>
+                        Menu des sections
+                    </button>
+                    <ul class="visible">
+                        <li><a href="#desc">Présentation de Jinx</a></li>
+                        <li><a href="#art">Concept Art et Modèle 3D</a></li>
+                    </ul>
+                </div>
                 <div class="container_jinx">
                     <div class="hiddenX item-texte">
                         <h1 class="titre titre-jinx">JINX</h1>
@@ -37,11 +51,12 @@
                             elle a été fondamentalement bouleversée, la transformant en tueuse démente qu'elle est
                             aujourd'hui.</p>
                     </div>
-                    <div class="hiddenY item-img"><img class="jinximg" src="./img/jinx.jpg" alt="Personnage Jinx">
+                    <div class="hiddenY item-img">
+                        <img class="jinximg" src="./img/jinx.jpg" alt="Personnage Jinx">
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="art">
                 <div class="hidden art">
                     <h1>Concept Art / Modèle 3D</h1>
                     <div class="hiddenX">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="arcaneicon.png"/>
     <link rel="stylesheet" href="style.css">
     <script defer src="anim.js"></script>
+    <script defer src="video.js"></script>
     <title>Arcane</title>
 </head>
 <body>
@@ -26,18 +27,33 @@
 
     <main>
         <article>
+
             <section>
                 <div class="hidden affiche"></div>
             </section>
+
             <section>
                 <div class="hidden">
                     <div class="bg">
                         <div class="hiddenY">
                             <img class="arcane" src="./img/arcanelogo.png" alt="Logo Arcane">
                         </div>
+                        <p class="hiddenY synopsis">Arcane est une série télévisée d'animation américano-française dont le scénario prend place dans l'univers du jeu vidéo League of Legends. Produite par Riot Games, elle est réalisée par Fortiche Production et diffusée à l'international sur Netflix.</p>
+                        <button class="hiddenY modal-btn modal-trigger">Voir la bande annonce</button>
                     </div>
                 </div>
             </section>
+
+            <section>
+                <div class="modal-container">
+                    <div class="overlay modal-trigger"></div>
+                    <button tabindex="1" aria-label="close modal" class="close-modal modal-trigger">X</button>
+                    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+                        <iframe id="video" src="https://www.youtube.com/embed/OweSahDkNtI?enablejsapi=1&html5=1" title="Arcane | Bande-annonce officielle VF | Netflix France" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
         </article>
     </main>
 
@@ -45,6 +61,5 @@
     <footer>
         <p>&#169; 2024 Riot Games, Inc. ARCANE LEAGUE OF LEGENDS et tous logos associés sont des marques, des marques de service et/ou des marques déposées de Riot Games, Inc.</p>
     </footer>
-    <script src="libphonenumber-js.min.js"></script>
 </body>
 </html>
