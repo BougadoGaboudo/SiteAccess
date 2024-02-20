@@ -14,22 +14,38 @@
 
 <body>
     <header>
-        <img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane">
         <nav>
+            <a class="alogo" href="index.html"><img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane"></a>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="actu.html">Actualités</a></li>
                 <li><a href="regions.html">Régions</a></li>
                 <li><a href="persos.html">Personnages</a></li>
             </ul>
+            <a class="login" href="connexion.html">Connexion</a>
         </nav>
-        <a class="login" href="connexion.html"><button>Connexion</button></a>
     </header>
     <hr>
 
     <main>
         <article>
-            <section>
+
+            <section class="links">
+                <div>
+                    <button id="menu" aria-expanded="false">
+                        <svg role="img" aria-label="Menu hamburger du sommaire" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <rect width="24" height="24" fill="none"/>
+                            <path d="M4 6h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
+                        </svg>
+                    </button>
+                    <ul class="visible">
+                        <li><a href="#desc">Présentation de Vi</a></li>
+                        <li><a href="#art">Concept Art / Modèle 3D</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="desc">
                 <div class="container_vi">
                     <div class="hiddenX item-img">
                         <img class="viimg" src="./img/vi.jpg" alt="Personnage Vi">
@@ -42,7 +58,8 @@
                     </div>
                 </div>
             </section>
-            <section>
+
+            <section id="art">
                 <div class="hidden art">
                     <h1>Concept Art / Modèle 3D</h1>
                     <div class="hiddenXRight">
@@ -59,6 +76,7 @@
                     </div>
                 </div>
             </section>
+
         </article>
     </main>
 

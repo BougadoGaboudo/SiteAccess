@@ -1,11 +1,8 @@
 @font-face {
-  font-family: "Philosopher";
-  src: url(./font/Philosopher-Regular.ttf);
-}
-@font-face {
   font-family: "Arcane";
   src: url(./font/Arcane\ Nine.otf);
 }
+
 /* @media(prefers-reduced-motion){
   .hidden, .hiddenX, .hiddenY, .hiddenXRight {
     transition: none;
@@ -35,33 +32,48 @@ hr {
 /* HEADER */
 
 li, li a {
-  font-family: "Arcane";
-  font-weight: 500;
   font-size: 1.2em;
   color: white;
   padding: 20px;
 }
-button {
-  font-family: "Arcane";
-  font-weight: 500;
-  font-size: 1.2em;
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.7em;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.login:hover{
+  color: rgb(19, 19, 20);
+  background-color: #BA8A63;
 }
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 30px 2.5%;
   background-color: rgb(19, 19, 20);
   height: 48px;
 }
+nav{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.alogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .logo {
-  cursor: pointer;
-  width: 8%;
+  width: 128px;
 }
 .navlinks li {
   display: inline-block;
-  /* padding: 20px; */
   font-size: 0.6em;
   border-radius: 10px;
 }
@@ -76,6 +88,7 @@ button {
   font-size: 0.6em;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
+  color: white;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -288,102 +301,85 @@ iframe {
 
 /* RÉGIONS */
 
-section.pilto-png {
-  background-image: url(img/piltoverfront.png);
+.pilto-bg, .zaun-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
-.pilto-bg, .zaun-bg {
-  position: relative;
-  height: 55.813rem;
-  width: 100%;
-}
-.pilto-bg::before {
-  content: "";
-  position: absolute  ;
-  height: 100%;
-  width: 100%;
+.pilto-bg{
   background-image: url(img/piltover.jpg);
-  background-position: center;
-  background-size: cover;
-  z-index: -2;
 }
-.pilto-text {
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 10vw + 0.5rem, 6rem);
-  font-weight: 900;
-  color: #BA8A63;
-  filter: drop-shadow(0 0 0.8rem rgb(243, 201, 166));
-  text-shadow: -1px 0px 0px white,
-  1px 0px 0px white,
-  0px -1px 0px white,
-  0px 1px 0px white;
-  z-index: -1;
-}
-section.zaun-bg::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
+.zaun-bg{
   background-image: url(img/zaun.jpg);
-  background-position: center;
-  background-size: cover;
-  z-index: 1;
 }
-.zaun-text {
-  position: relative;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 10vw + 0.5rem, 6rem);
-  font-weight: 900;
-  color: #BA8A63;
-  filter: drop-shadow(0 0 0.8rem rgb(243, 201, 166));
-  text-shadow: -1px 0px 0px white,
-  1px 0px 0px white,
-  0px -1px 0px white,
-  0px 1px 0px white;
-  z-index: 2;
-}
-
-/* PERSOS */
-
-button svg {
-  width: 24px; /* Largeur de l'icône */
-  height: 24px; /* Hauteur de l'icône */
-  margin-right: 5px; /* Marge à droite de l'icône */
-}
-ul.visible {
-  display: none; /* Masquer le menu par défaut */
-}
-ul.visible li {
-  padding: 5px 0; /* Espacement entre les éléments de la liste */
-}
-ul.visible li a {
-  color: white; /* Couleur du texte des liens */
-  text-decoration: none; /* Supprimer la soulignement des liens */
-}
-ul.visible.open {
-  display: block; /* Afficher le menu */
-}
-.links{
+.region-text{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: 2s;
+  text-align: justify;
+  text-align-last: center;
 }
-.links a{
-  transition: background-color 2s ease;
-  
+.region-text h1{
+  font-size: 1.6em;
+  color: #BA8A63;
+  filter: drop-shadow(0 0 0.8rem rgb(243, 201, 166));
+  text-shadow: -1px 0px 0px white,
+  1px 0px 0px white,
+  0px -1px 0px white,
+  0px 1px 0px white;
+}
+.region-text p{
+  font-size: 0.7em;
+  max-width: 1280px;
+}
+.text-bloc-pilto{
+  color: #f3dbc8;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  border-radius: 1em;
+}
+.text-bloc-zaun{
+  color: #f3dbc8;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1em;
+}
+
+/* PERSOS */
+
+#menu{
+  margin-top: 16px;
+  padding: 8px 12px;
+  border-radius: 10%;
+}
+ul.visible {
+  display: none;
+}
+ul.visible li{
+  padding: 16px 0 0 0;
+}
+ul.visible li a {
+  color: white;
+  padding: 0;
+}
+ul.visible.open {
+  display: block;
+}
+.links{
+  position: sticky;
+  float: left;
+  top: 2%;
+  left: 2%;
+  z-index: 1000;
+  font-size: 0.4em;
 }
 .links a:hover {
-  background-color: #f0f0f0;
+  text-decoration: underline;
 }
 .jinximgC, .viimgC, .silcoimgC {
   border-radius: 30px;
@@ -512,11 +508,13 @@ p.texte {
 
 /* FORMULAIRE CONNEXION INSCRIPTION*/
 
+.form-height{
+  height: 80vh;
+}
 .form-sect {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
   scale: 0.7;
 }
 .form-div {
@@ -524,7 +522,7 @@ p.texte {
   justify-content: center;
   align-items: center;
   max-width: 1280px;
-  background-color: rgb(32, 32, 34);
+  background-color: rgb(32, 32, 34, 0.8);
   border: 0.5rem solid white;
   border-radius: 2rem;
 }
@@ -534,9 +532,11 @@ form {
   justify-content: center;
   align-items: center;
 }
+.create{
+  padding-bottom: 2rem;
+}
 .inscription {
   height: 60rem;
-  margin: 4rem;
 }
 .inscription legend {
   font-size: 0.7em;
@@ -574,7 +574,7 @@ fieldset {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   border: none;
 }
 .inscription input {
