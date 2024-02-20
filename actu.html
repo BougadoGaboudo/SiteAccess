@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav aria-label="Barre de navigation">
             <a class="alogo" href="index.html"><img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane"></a>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -62,15 +62,15 @@
                         </div>
                     </div>
                 </div>
-                <button class="modal-btn2 modal-trigger">Voir le teaser</button>
+                <button type="button" class="modal-btn2 modal-trigger">Voir le teaser</button>
             </section>
 
             <section>
                 <div class="modal-container">
                     <div class="overlay modal-trigger"></div>
-                    <button tabindex="1" aria-label="close modal" class="close-modal modal-trigger">X</button>
-                    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
-                        <iframe id="video" src="https://www.youtube.com/embed/D3FMgkSBOBE?enablejsapi=1&html5=1" title="Arcane : Premier aperçu de la saison 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <button type="button" tabindex="1" aria-label="Fermer la fenêtre modale" class="close-modal modal-trigger">X</button>
+                    <div class="modal">
+                        <iframe aria-label="Petit teaser de la saison 2 d'Arcane" id="video" src="https://www.youtube.com/embed/D3FMgkSBOBE?enablejsapi=1&html5=1" title="Arcane : Premier aperçu de la saison 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </section>

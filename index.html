@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Barre de navigation">
             <a class="alogo" href="index.html"><img class="logo" src="./img/arcanelogo.png" alt="Logo de la série Arcane"></a>
             <ul class="navlinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -39,7 +39,7 @@
                             <img class="arcane" src="./img/arcanelogo.png" alt="Logo Arcane">
                         </div>
                         <p class="hiddenY synopsis">Arcane est une série télévisée d'animation américano-française dont le scénario prend place dans l'univers du jeu vidéo League of Legends. Produite par Riot Games, elle est réalisée par Fortiche Production et diffusée à l'international sur Netflix.</p>
-                        <button class="hiddenY modal-btn modal-trigger"><h1>Voir la bande annonce</h1></button>
+                        <button type="button" class="hiddenY modal-btn modal-trigger"><h1>Voir la bande annonce</h1></button>
                     </div>
                 </div>
             </section>
@@ -47,9 +47,9 @@
             <section>
                 <div class="modal-container">
                     <div class="overlay modal-trigger"></div>
-                    <button tabindex="1" aria-label="close modal" class="close-modal modal-trigger">X</button>
-                    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
-                        <iframe id="video" src="https://www.youtube.com/embed/OweSahDkNtI?enablejsapi=1&html5=1" title="Arcane | Bande-annonce officielle VF | Netflix France" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <button type="button" tabindex="1" aria-label="Fermer la fenêtre modale" class="close-modal modal-trigger">X</button>
+                    <div class="modal">
+                        <iframe aria-label="Bande-annonce de la saison 1 d'Arcane" id="video" src="https://www.youtube.com/embed/OweSahDkNtI?enablejsapi=1&html5=1" title="Arcane | Bande-annonce officielle VF | Netflix France" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
